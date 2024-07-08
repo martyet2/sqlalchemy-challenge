@@ -7,17 +7,14 @@ import datetime as dt
 import numpy as np
 import pandas as pd
 
-from flask import Flask, jsonify
 
-from sqlHelper import SQLHelper
+from flask import Flask, jsonify
 
 #################################################
 # Database Setup
 #################################################
 
 app = Flask(__name__)
-
-sql = SQLHelper()
 
 database_path = "/Users/martinthompson/Desktop/UCF_Bootcamp/SurfsUp/Resources/hawaii.sqlite"
 engine = create_engine(f'sqlite:///{database_path}')                     
